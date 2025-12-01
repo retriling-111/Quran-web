@@ -1,9 +1,9 @@
 const CACHE_NAME = "quran-cache-v1";
 const urlsToCache = [
   "./",
-  "./../index.html",
+  "./index.html",
   "./manifest.json",
-  "./../img/quranicon.png"
+  "./img/quranicon.png"
 ];
 
 // Install service worker
@@ -22,7 +22,7 @@ self.addEventListener("fetch", (event) => {
       return (
         response ||
         fetch(event.request).catch(() =>
-          caches.match("./../index.html")
+          caches.match("./index.html")
         )
       );
     })
